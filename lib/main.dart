@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Matrimony',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.green,
       ),
       home: const LoginScreen(),
       getPages: [

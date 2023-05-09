@@ -6,7 +6,6 @@ import 'package:matrimony/models/user.dart';
 import 'package:matrimony/repositories/user_respositories.dart';
 import 'package:matrimony/route.dart';
 import 'package:matrimony/screen/registration_screen/registration_screen.dart';
-import 'package:matrimony/screen/sample.dart';
 import 'package:matrimony/utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -34,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Get.snackbar(
         'Error',
         'Please enter phone number',
-        colorText: Colors.white,
+        colorText: Colors.black,
         barBlur: 17,
       );
       return;
@@ -44,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Get.snackbar(
         'Error',
         'Invalid phone number',
-        colorText: Colors.white,
+        colorText: Colors.black,
         barBlur: 17,
       );
       return;
@@ -56,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Get.snackbar(
         'Error',
         'Please enter password',
-        colorText: Colors.white,
+        colorText: Colors.black,
         barBlur: 17,
       );
       return;
@@ -93,149 +92,142 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colors.purple,
-              Colors.pink,
-            ],
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              width: double.infinity,
-            ),
-            const Icon(
-              Icons.favorite_border,
-              size: 80,
-              color: Colors.white,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'Welcome!',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: TextFormField(
-                controller: phoneNumberController,
-                keyboardType: TextInputType.phone,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.2),
-                  hintText: 'Phone Number',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
-                  ),
-                  prefixIcon: const Icon(
-                    Icons.phone,
-                    color: Colors.white,
-                  ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 58.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.favorite_border,
+                  size: 80,
+                  color: Colors.black,
                 ),
-                style: const TextStyle(
-                  color: Colors.white,
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: TextFormField(
-                obscureText: !isPasswordVisible,
-                controller: passwordController,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.2),
-                  hintText: 'Password',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
-                  ),
-                  prefixIcon: const Icon(
-                    Icons.lock_outlined,
-                    color: Colors.white,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      isPasswordVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        isPasswordVisible = !isPasswordVisible;
-                      });
-                    },
-                  ),
-                ),
-                style: const TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: MaterialButton(
-                onPressed: () {
-                  login();
-                },
-                minWidth: double.infinity,
-                height: 50,
-                color: Colors.pink[400],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Text(
-                  'LOGIN',
+                const Text(
+                  'Welcome!',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegistrationScreen()),
-                );
-              },
-              child: const Text(
-                'Don\'t have an account yet? Register now!',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                const SizedBox(
+                  height: 40,
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    controller: phoneNumberController,
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black.withOpacity(0.2),
+                      hintText: 'Phone Number',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none,
+                      ),
+                      prefixIcon: const Icon(
+                        Icons.phone,
+                        color: Colors.black,
+                      ),
+                    ),
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    obscureText: !isPasswordVisible,
+                    controller: passwordController,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black.withOpacity(0.2),
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none,
+                      ),
+                      prefixIcon: const Icon(
+                        Icons.lock_outlined,
+                        color: Colors.black,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          isPasswordVisible
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.black,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            isPasswordVisible = !isPasswordVisible;
+                          });
+                        },
+                      ),
+                    ),
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: MaterialButton(
+                    onPressed: () {
+                      login();
+                    },
+                    minWidth: double.infinity,
+                    height: 50,
+                    color: Colors.green[500],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Text(
+                      'LOGIN',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegistrationScreen()),
+                    );
+                  },
+                  child: const Text(
+                    'Don\'t have an account yet? Register now!',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

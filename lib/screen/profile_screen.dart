@@ -38,7 +38,6 @@ class _ProfileScreenState extends State<ProfileScreen>
             pinned: true,
             expandedHeight: 250,
             flexibleSpace: FlexibleSpaceBar(
-              // title: Text(widget.user['name'] ?? ''),
               background: Stack(
                 fit: StackFit.expand,
                 children: [
@@ -85,225 +84,79 @@ class _ProfileScreenState extends State<ProfileScreen>
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
-                                          'Personal Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        const SizedBox(height: 30),
-                                        Text(
-                                          'ID: ${widget.user['id']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        heading('Personal Information'),
+                                        text('ID: ${widget.user['id']}'),
+                                        text(
                                           'Date of Birth: ${widget.user['dateOfBirth']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Age: ${widget.user['age']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Gender: ${widget.user['gender']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        text('Age: ${widget.user['age']}'),
+                                        text(
+                                            'Gender: ${widget.user['gender']}'),
+                                        text(
                                           'Marital Status: ${widget.user['maritalStatus']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Religion: ${widget.user['religion']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Caste: ${widget.user['caste']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Education: ${widget.user['education']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Mother Tongue: ${widget.user['motherTongue']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Languages Known: ${widget.user['languageKnown']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Country: ${widget.user['country']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'State: ${widget.user['state']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'City: ${widget.user['city']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
+                                        text(
+                                            'Religion: ${widget.user['religion']}'),
+                                        text('Caste: ${widget.user['caste']}'),
+                                        text(
+                                            'Martial Status: ${widget.user['martialStatus']}'),
+                                        text(
+                                            'Mother Tongue: ${widget.user['motherTongue']}'),
+                                        text(
+                                            'Languages Known: ${widget.user['languageKnown']}'),
+                                        text(
+                                            'Country: ${widget.user['country']}'),
+                                        text('State: ${widget.user['state']}'),
+                                        text('City: ${widget.user['city']}'),
+                                        text(
+                                            'Height: ${widget.user['height']}'),
+                                        text(
+                                            'Weight: ${widget.user['weight']}'),
+                                        text(
+                                            'Complexion: ${widget.user['complexion']}'),
+                                        text(
+                                            'About Me: ${widget.user['aboutMe']}'),
                                         const SizedBox(height: 50),
-                                        const Text(
-                                          'Professional Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        const SizedBox(height: 30),
-                                        Text(
-                                          'Education: ${widget.user['education']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Company Name: ${widget.user['companyName']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Designation: ${widget.user['designation']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Employment Type: ${widget.user['employmentType']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Salary: ${widget.user['salary']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
+                                        heading('Professional Information'),
+                                        text(
+                                            'Education: ${widget.user['education']}'),
+                                        text(
+                                            'Company Name: ${widget.user['companyName']}'),
+                                        text(
+                                            'Designation: ${widget.user['designation']}'),
+                                        text(
+                                            'Employment Type: ${widget.user['employmentType']}'),
+                                        text(
+                                            'Salary: ${widget.user['salary']}'),
                                         const SizedBox(height: 50),
-                                        const Text(
-                                          'Family Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        const SizedBox(height: 30),
-                                        Text(
+                                        heading('Family Information'),
+                                        text(
                                           'Father Name: ${widget.user['fatherName']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        text(
                                           'Father Occupation: ${widget.user['fatherOccupation']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        text(
+                                          'Father Caste: ${widget.user['fatherCaste']}',
+                                        ),
+                                        text(
                                           'Mother Name: ${widget.user['motherName']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        text(
                                           'Mother Occupation: ${widget.user['motherOccupation']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
+                                        text(
+                                          'Mother Caste: ${widget.user['motherCaste']}',
+                                        ),
+                                        text(
+                                          'Number of Siblings: ${widget.user['numberofSiblings']}',
+                                        ),
+                                        text(
+                                          'Number of Siblings Married: ${widget.user['numberofSiblingsMarried']}',
+                                        ),
+                                        text(
+                                          'About Family: ${widget.user['aboutFamily']}',
+                                        ),
                                       ]),
                                 ),
 
@@ -315,207 +168,43 @@ class _ProfileScreenState extends State<ProfileScreen>
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
-                                          'Personal Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
+                                        heading(
+                                          'Partner perference',
                                         ),
-                                        const SizedBox(height: 30),
-                                        Text(
-                                          'ID: ${widget.user['id']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Age: ${widget.user['selectedPartnerAge']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Date of Birth: ${widget.user['dateOfBirth']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Religion: ${widget.user['selectedPartnerReligion']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Age: ${widget.user['age']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Caste: ${widget.user['selectedPartnerCaste']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Gender: ${widget.user['gender']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Languages Known: ${widget.user['selectedPartnerLanguages']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Marital Status: ${widget.user['maritalStatus']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Height: ${widget.user['partnerHeight']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Religion: ${widget.user['religion']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Weight: ${widget.user['partnerWeight']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Caste: ${widget.user['caste']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Complexion: ${widget.user['partnerComplexion']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Education: ${widget.user['education']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Education: ${widget.user['partnerEducation']}',
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Mother Tongue: ${widget.user['motherTongue']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Languages Known: ${widget.user['languageKnown']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Country: ${widget.user['country']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'State: ${widget.user['state']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'City: ${widget.user['city']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 50),
-                                        const Text(
-                                          'Professional Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        const SizedBox(height: 30),
-                                        Text(
-                                          'Education: ${widget.user['education']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Company Name: ${widget.user['companyName']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Designation: ${widget.user['designation']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
+                                        text(
                                           'Employment Type: ${widget.user['employmentType']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
                                         ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Salary: ${widget.user['salary']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
+                                        text(
+                                          'Salary: ${widget.user['partnerSalary']}',
+                                        ),
+                                        text(
+                                          'About partner: ${widget.user['aboutpartner']}',
                                         ),
                                         const SizedBox(height: 50),
-                                        const Text(
-                                          'Family Information',
-                                          style: TextStyle(
-                                              fontSize: 24.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        const SizedBox(height: 30),
-                                        Text(
-                                          'Father Name: ${widget.user['fatherName']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          'Father Occupation: ${widget.user['fatherOccupation']}',
-                                          style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[700],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
                                       ]),
                                 ),
                               ],
@@ -524,6 +213,30 @@ class _ProfileScreenState extends State<ProfileScreen>
                         ),
                       ])))
         ]),
+      ),
+    );
+  }
+
+  Widget heading(String heading) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 18.0, bottom: 30),
+      child: Text(
+        heading,
+        style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  Widget text(String text) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10.0, bottom: 10),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          color: Colors.grey[700],
+        ),
       ),
     );
   }
