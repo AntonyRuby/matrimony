@@ -707,7 +707,6 @@ class RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Colors.pink.shade600,
         body: Form(
       key: formKey,
       child: Padding(

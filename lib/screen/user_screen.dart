@@ -8,7 +8,6 @@ class User {
   final String caste;
   final String religion;
   final String occupation;
-
   final int age;
 
   User({
@@ -41,7 +40,6 @@ class _UserScreenState extends State<UserScreen> {
   @override
   void initState() {
     super.initState();
-
     _fetchUsers();
   }
 
